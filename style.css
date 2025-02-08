@@ -1,37 +1,60 @@
-body{
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 46%, rgba(35,148,171,1) 66%, rgba(9,121,114,1) 100%);
-background-attachment: fixed;
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 46%, rgba(35,148,171,1) 66%, rgba(9,121,114,1) 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-#form{
-    width: 400px;
-    margin: 20vh auto 0 auto;
+.container {
+    width: 90%;
+    max-width: 400px;
     background-color: whitesmoke;
     padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-h1{
+h1 {
     text-align: center;
-    color:#01688F;
+    color: #01688F;
 }
-#form button{
+#form button {
     background-color: #01688F;
     color: white;
     border: none;
     padding: 10px;
-   margin: 10px;
-   border-radius: 5px;
-   cursor: pointer;
-   width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
 }
-.input-group{
+.input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-
+    margin-bottom: 15px;
 }
-.input-group input:focus{
-outline: none;
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
-.input-group .error{
+.input-group input:focus {
+    outline: none;
+    border-color: #01688F;
+}
+.input-group .error {
     color: red;
+    font-size: 14px;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    #form button {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
